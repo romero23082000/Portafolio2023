@@ -37,7 +37,15 @@ function App() {
         <TabsXp />
       </Grid>
       <Headers text1="Proyectos" text2="Proyectos realizados" />
-      <Grid item sx={{ width: "100%" }}>
+      <Grid
+        item
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+        }}
+      >
         <HorizontalScroll />
       </Grid>
       <Headers text1="Contactame" text2="Ponte en contacto conmigo" />

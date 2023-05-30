@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import TimeLines from "./TimeLines";
 import SchoolIcon from "@mui/icons-material/School";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import { dataExp } from "../../data";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -33,44 +34,6 @@ const TabsXp = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
-
-  const data = {
-    laboral: [
-      {
-        id: 1,
-        title: "TitanQ Ingenieria",
-        cargo: "Desarrollador junior FullStack",
-        year: "07/03/2022 - 21/01/2023",
-      },
-    ],
-    educativa: [
-      {
-        id: 1,
-        title: "Universidad de Manizales",
-        cargo: "Ingenieria de sistemas",
-        year: "Actualmente",
-      },
-      {
-        id: 2,
-        title: "Universidad Sergio Arboleda",
-        cargo: "Programa Misión TIC 2022 Ruta de aprendizaje 2",
-        year: "8 Meses",
-      },
-      {
-        id: 3,
-        title: "Universidad de Manizales",
-        cargo: "Tecnólogo en sistemas de información comercial para Internet",
-        year: "02/2018 - 11/2018",
-      },
-      {
-        id: 4,
-        title: "Universidad de manizales",
-        cargo:
-          "Técnico profesional en configuración de servicios comerciales WEB",
-        year: "02/2016 - 11/2017",
-      },
-    ],
   };
 
   return (
@@ -100,10 +63,10 @@ const TabsXp = () => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <TimeLines data={data.educativa} />
+        <TimeLines data={dataExp.educativa} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <TimeLines data={data.laboral} />
+        <TimeLines data={dataExp.laboral} />
       </TabPanel>
     </Box>
   );

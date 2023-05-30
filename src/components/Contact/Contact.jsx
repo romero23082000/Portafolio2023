@@ -97,7 +97,6 @@ const Contact = () => {
           </Box>
 
           <TextField
-            required
             id="outlined-required"
             label="Proyecto"
             fullWidth
@@ -110,6 +109,7 @@ const Contact = () => {
             rows={4}
             fullWidth
             name="message"
+            required
           />
           {loading ? (
             <CircularProgress color="secondary" />
