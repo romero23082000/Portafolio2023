@@ -7,7 +7,7 @@ const Headers = (props) => {
     <>
       <Typography
         variant="h4"
-        sx={{ margin: "30px 0 0 0", fontWeight: 700, textAlign: "center" }}
+        sx={{ margin: "80px 0 0 0", fontWeight: 700, textAlign: "center" }}
       >
         {text1}
       </Typography>

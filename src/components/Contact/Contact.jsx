@@ -2,7 +2,13 @@ import { Box } from "@mui/system";
 import React from "react";
 import PermPhoneMsgOutlinedIcon from "@mui/icons-material/PermPhoneMsgOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import { Button, CircularProgress, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  CircularProgress,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
@@ -47,7 +53,15 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <Grid
+      sx={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "50px",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
+    >
       <Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <PermPhoneMsgOutlinedIcon
@@ -143,7 +157,7 @@ const Contact = () => {
           )}
         </form>
       </Box>
-    </>
+    </Grid>
   );
 };
 

@@ -8,7 +8,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
 import CardContent from "@mui/material/CardContent";
-import { IconButton } from "@mui/material";
+import { Grid, IconButton } from "@mui/material";
 import { styles } from "./styles";
 import { data } from "../../data";
 import WebIcon from "@mui/icons-material/Web";
@@ -25,7 +25,15 @@ const AccordionSkills = () => {
   };
 
   return (
-    <>
+    <Grid
+      sx={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "50px",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
+    >
       {data.map((skill, index) => {
         return (
           <Card sx={{ width: { md: "450px" } }} key={skill.id}>
@@ -92,7 +100,7 @@ const AccordionSkills = () => {
           </Card>
         );
       })}
-    </>
+    </Grid>
   );
 };
 export default AccordionSkills;

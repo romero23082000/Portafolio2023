@@ -5,6 +5,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Headers from "./components/Headers/Headers";
 import HorizontalScroll from "./components/HorizontalScroll/HorizontalScroll";
+import Navbar from "./components/Navbar/Navbar";
 import TabsXp from "./components/TabsExperience/TabsXp";
 
 function App() {
@@ -16,49 +17,52 @@ function App() {
       alignItems="center"
       width="100%"
     >
-      <Headers
-        text1="Nivel tecnologico"
-        text2=" Herramientas y tecnologias que suelo usar en mis desarrollos"
-      />
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          alignItems: "flex-start",
-          gap: "50px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
+      <Navbar />
+      <Grid item id="Nivel">
+        <Headers
+          text1="Nivel tecnologico"
+          text2=" Herramientas y tecnologias que suelo usar en mis desarrollos"
+        />
         <AccordionSkills />
       </Grid>
-      <Headers text1="Experiencias" text2="Mi recorrido laboral y educativo" />
-      <Grid item sx={{ width: "100%" }}>
-        <TabsXp />
-      </Grid>
-      <Headers text1="Proyectos" text2="Proyectos realizados" />
       <Grid
         item
         sx={{
           width: "100%",
           display: "flex",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "center",
+          flexDirection: "column",
         }}
+        id="Experiencias"
       >
+        <Headers
+          text1="Experiencias"
+          text2="Mi recorrido laboral y educativo"
+        />
+        <TabsXp />
+      </Grid>
+      <Grid
+        item
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+        id="Proyectos"
+      >
+        <Headers text1="Proyectos" text2="Proyectos realizados" />
         <HorizontalScroll />
       </Grid>
-      <Headers text1="Contactame" text2="Ponte en contacto conmigo" />
       <Grid
         sx={{
-          display: "flex",
-          alignItems: "flex-start",
-          gap: "50px",
-          flexWrap: "wrap",
-          justifyContent: "center",
           margin: "0px 15px 30px 15px",
         }}
+        id="Contacto"
       >
+        <Headers text1="Contactame" text2="Ponte en contacto conmigo" />
         <Contact />
       </Grid>
       <Grid
