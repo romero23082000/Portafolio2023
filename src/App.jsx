@@ -7,6 +7,7 @@ import Headers from "./components/Headers/Headers";
 import HorizontalScroll from "./components/HorizontalScroll/HorizontalScroll";
 import Navbar from "./components/Navbar/Navbar";
 import TabsXp from "./components/TabsExperience/TabsXp";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -18,6 +19,20 @@ function App() {
       width="100%"
     >
       <Navbar />
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          background:
+            "conic-gradient(from -60deg at 50% calc(100%/3),#d9d9d9 0 120deg,#0000 0), conic-gradient(from 120deg at 50% calc(200%/3),#d9d9d9 0 120deg,#0000 0), conic-gradient(from  60deg at calc(200%/3), #d9d9d9 60deg,#ffffff 0 120deg,#0000 0), conic-gradient(from 180deg at calc(100%/3),#b2b2b2 60deg,#d9d9d9 0 120deg,#0000 0), linear-gradient(90deg,#b2b2b2   calc(100%/6),#ffffff 0 50%,#b2b2b2 0 calc(500%/6),#ffffff 0)",
+          backgroundSize: "calc(1.732 * 82px) 82px",
+        }}
+        height="800px"
+      >
+        <Home />
+      </Grid>
       <Grid item id="Nivel">
         <Headers
           text1="Nivel tecnologico"

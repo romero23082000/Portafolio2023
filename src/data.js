@@ -56,7 +56,7 @@ export const dataProyects = [
     id: 1,
     title: "web peliculas",
     img: img,
-    url: "https://gymexercisesfree.netlify.app/",
+    url: "https://prueba-movies.netlify.app/",
     description:
       "Web realizada para mejorar conceptos y buenas practicas en React.js y el consumo de APIS, su funcionalidad consiste en un sitio web para la busqueda de peliculas",
   },
@@ -79,7 +79,7 @@ export const dataProyects = [
   {
     id: 4,
     title: "Hacker news",
-    url: "hackernewspt.netlify.app",
+    url: "https://hackernewspt.netlify.app/",
     img: img4,
     description:
       "Prueba tecnica para la cual se pusieron en practica el manejo de heramientos como localStorage  diseño con material ui y consumo de apis ",
@@ -87,7 +87,7 @@ export const dataProyects = [
   {
     id: 5,
     title: "Dashboard social",
-    url: "dashboardredsocial.netlify.app",
+    url: "https://dashboardredsocial.netlify.app/",
     img: img5,
     description:
       "Reto de la pagina frontend mentor para fortalecer conceptos de css-grid, flexbox y maquetación con tema oscuro el sitio es totalmente responsivo ",
