@@ -18,13 +18,13 @@ const TimeLines = (props) => {
           <TimelineItem key={item.id}>
             <TimelineSeparator>
               <TimelineDot
+                color="primary"
                 sx={{
                   margin: 0,
-                  backgroundColor: "#9032bb",
                 }}
               />
               {index != data.length - 1 && (
-                <TimelineConnector sx={{ backgroundColor: "#9032bb" }} />
+                <TimelineConnector sx={{ bgcolor: "primary.main" }} />
               )}
             </TimelineSeparator>
             <TimelineContent sx={{ padding: "6px 16px" }}>

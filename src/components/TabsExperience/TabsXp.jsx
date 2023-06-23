@@ -44,8 +44,8 @@ const TabsXp = () => {
           onChange={handleChange}
           aria-label="basic tabs example"
           centered
-          textColor="secondary"
-          indicatorColor="secondary"
+          textColor="primary"
+          indicatorColor="primary"
           sx={{
             minHeight: "24px",
             "& .MuiTab-root": {

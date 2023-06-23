@@ -65,7 +65,8 @@ const Contact = () => {
       <Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <PermPhoneMsgOutlinedIcon
-            sx={{ color: "#9032bb", marginRight: "15px" }}
+            color="primary"
+            sx={{ marginRight: "15px" }}
           />
           <div>
             <Typography variant="h5" fontWeight={700}>
@@ -75,7 +76,7 @@ const Contact = () => {
           </div>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <EmailOutlinedIcon sx={{ color: "#9032bb", marginRight: "15px" }} />
+          <EmailOutlinedIcon color="primary" sx={{ marginRight: "15px" }} />
           <div>
             <Typography variant="h5" fontWeight={700}>
               Email
@@ -126,9 +127,9 @@ const Contact = () => {
             required
           />
           {loading ? (
-            <CircularProgress color="secondary" />
+            <CircularProgress color="primary" />
           ) : (
-            <Button variant="contained" type="submit" color="secondary">
+            <Button variant="contained" type="submit" color="primary">
               Enviar
             </Button>
           )}
