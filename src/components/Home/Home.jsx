@@ -5,13 +5,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Home = () => {
   return (
-    <Paper
-      variant="outlined"
-      elevation={24}
-      sx={{ width: "500px", margin: "16px" }}
-    >
+    <Paper elevation={24} sx={{ width: "500px", margin: "16px" }}>
       <Box sx={{ padding: "16px" }}>
-        <Typography variant="h6" color="secondary" fontWeight={700}>
+        <Typography variant="h6" color="primary" fontWeight={700}>
           Hola
         </Typography>
         <Typography variant="body1">

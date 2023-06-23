@@ -15,40 +15,34 @@ const Cards = (props) => {
         width: { xs: "250px", sm: "600px", md: "800px" },
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: { xs: "wrap", sm: "nowrap" },
-        }}
-      >
-        <CardContent>
-          <CardMedia component="img" image={item.img} title="proyecto" />
-        </CardContent>
-        <Box>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {item.title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {item.description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Link to={item.url} target="_blank">
-              <Button
-                size="small"
-                color="secondary"
-                variant="contained"
-                endIcon={<ArrowForwardIcon />}
-                sx={{ textTransform: "initial" }}
-              >
-                Visitar sitio
-              </Button>
-            </Link>
-          </CardActions>
-        </Box>
-      </Box>
+      <CardMedia
+        component="img"
+        image={item.img}
+        title="proyecto"
+        sx={{ width: "100%", height: { xs: "75px", md: "150px" } }}
+      />
+
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {item.title}
+        </Typography>
+        <Typography variant="body2" color="text.primary">
+          {item.description}
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ padding: "16px" }}>
+        <Link to={item.url} target="_blank">
+          <Button
+            size="small"
+            color="primary"
+            variant="contained"
+            endIcon={<ArrowForwardIcon />}
+            sx={{ textTransform: "initial" }}
+          >
+            Visitar sitio
+          </Button>
+        </Link>
+      </CardActions>
     </Card>
   );
 };

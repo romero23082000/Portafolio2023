@@ -28,6 +28,9 @@ const Footer = () => {
           sx={{
             display: "flex",
             gap: "30px",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Typography variant="h6">Contactame</Typography>
@@ -36,10 +39,10 @@ const Footer = () => {
         </Box>
         <Typography>Design: Andres Romero</Typography>
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <GitHubIcon />
         <LinkedInIcon />
-      </Grid>
+      </Grid> */}
     </>
   );
 };

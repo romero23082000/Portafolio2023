@@ -7,7 +7,6 @@ export const styles = {
     display: "flex",
     justifyContent: "space-between",
     "& .MuiSvgIcon-root, span ": {
-      color: "#9032bb",
       fontSize: "30px",
     },
   },

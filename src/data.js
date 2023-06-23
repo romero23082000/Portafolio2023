@@ -1,8 +1,8 @@
 import WebIcon from "@mui/icons-material/Web";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import img from "./assets/img/PrimeraImagen.jpg";
-import img2 from "./assets/img/countrys.jpg";
-import img3 from "./assets/img/gymapp.jpg";
+import img2 from "./assets/img/countrys.png";
+import img3 from "./assets/img/gymapp.png";
 import img4 from "./assets/img/hackernews.jpg";
 import img5 from "./assets/img/Dashboardredsocial.jpg";
 
@@ -28,7 +28,12 @@ export const data = [
       },
       {
         id: 3,
-        name: "React",
+        name: "JAVASCRIPT",
+        porcent: 50,
+      },
+      {
+        id: 4,
+        name: "REACT",
         porcent: 55,
       },
     ],
@@ -43,7 +48,12 @@ export const data = [
     skills: [
       {
         id: 1,
-        name: "node",
+        name: "NodeJs",
+        porcent: 40,
+      },
+      {
+        id: 2,
+        name: "SequelizeJs",
         porcent: 40,
       },
     ],
@@ -52,6 +62,14 @@ export const data = [
 ];
 
 export const dataProyects = [
+  {
+    id: 5,
+    title: "Dashboard social",
+    url: "https://dashboardredsocial.netlify.app/",
+    img: img5,
+    description:
+      "Reto de la pagina frontend mentor para fortalecer conceptos de css-grid, flexbox y maquetación con tema oscuro el sitio es totalmente responsivo ",
+  },
   {
     id: 1,
     title: "web peliculas",
@@ -84,14 +102,7 @@ export const dataProyects = [
     description:
       "Prueba tecnica para la cual se pusieron en practica el manejo de heramientos como localStorage  diseño con material ui y consumo de apis ",
   },
-  {
-    id: 5,
-    title: "Dashboard social",
-    url: "https://dashboardredsocial.netlify.app/",
-    img: img5,
-    description:
-      "Reto de la pagina frontend mentor para fortalecer conceptos de css-grid, flexbox y maquetación con tema oscuro el sitio es totalmente responsivo ",
-  },
+
 ]
 
 export const dataExp =

@@ -8,10 +8,9 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
 import CardContent from "@mui/material/CardContent";
-import { Grid, IconButton } from "@mui/material";
+import { Divider, Grid, IconButton } from "@mui/material";
 import { styles } from "./styles";
 import { data } from "../../data";
-import WebIcon from "@mui/icons-material/Web";
 
 const AccordionSkills = () => {
   const [expanded, setExpanded] = useState();
@@ -39,14 +38,14 @@ const AccordionSkills = () => {
           <Card sx={{ width: { md: "450px" } }} key={skill.id}>
             <CardContent sx={styles.cardContent}>
               <Box sx={styles.cardBox}>
-                <Icon>{skill.icon}</Icon>
+                <Icon color="primary">{skill.icon}</Icon>
                 <Box sx={{ marginLeft: "10px" }}>
                   <Typography sx={{ fontWeight: 700 }}>
                     {skill.title}
                   </Typography>
                   <Typography
                     sx={{
-                      color: "text.secondary",
+                      color: "text.primary",
                       fontWeight: 700,
                       fontSize: "14px",
                     }}
@@ -72,26 +71,12 @@ const AccordionSkills = () => {
                         }}
                       >
                         <Typography
-                          sx={{ fontWeight: 700, color: "text.secondary" }}
+                          sx={{ fontWeight: 700, color: "text.primary" }}
                         >
                           {item.name}
                         </Typography>
-                        <Typography
-                          sx={{ fontWeight: 700, color: "text.secondary" }}
-                        >
-                          {item.porcent}%
-                        </Typography>
                       </Box>
-                      <LinearProgress
-                        variant="determinate"
-                        value={item.porcent}
-                        sx={{
-                          backgroundColor: "#f988ff",
-                          "& .MuiLinearProgress-barColorPrimary": {
-                            backgroundColor: "#4c007d",
-                          },
-                        }}
-                      />
+                      <Divider sx={{ bgcolor: "primary.light" }} />
                     </Box>
                   );
                 })}

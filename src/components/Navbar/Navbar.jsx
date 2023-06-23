@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Drawer,
-  IconButton,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -11,6 +10,9 @@ import React from "react";
 import { useState } from "react";
 import NavListDrawer from "./NavListDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import IconButton from "@mui/material/IconButton";
 
 const navLinks = [
   {
@@ -36,25 +38,22 @@ const navLinks = [
   ,
 ];
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { mode, handleModeChange } = props;
   const [open, setOpen] = useState(false);
   return (
     <>
-      <AppBar
-        component="nav"
-        position="sticky"
-        sx={{ backgroundColor: "#ffffff" }}
-      >
+      <AppBar component="nav" position="sticky" color="inherit">
         <Toolbar>
           <IconButton
-            color="secondary"
+            color="primary"
             size="Large"
             onClick={() => setOpen(true)}
             sx={{ display: { xs: "flex", sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }} color="secondary">
+          <Typography variant="h6" sx={{ flexGrow: 1 }} color="primary">
             Andres Romero
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -64,13 +63,20 @@ const Navbar = () => {
                   key={item.title}
                   component="a"
                   href={item.path}
-                  color="secondary"
+                  color="primary"
                 >
                   {item.title}
                 </Button>
               );
             })}
           </Box>
+
+          <Typography color="primary">
+            | {mode === "light" ? "Light" : "Dark"} mode
+          </Typography>
+          <IconButton sx={{ ml: 1 }} onClick={handleModeChange}>
+            {mode === "light" ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
         </Toolbar>
       </AppBar>
 

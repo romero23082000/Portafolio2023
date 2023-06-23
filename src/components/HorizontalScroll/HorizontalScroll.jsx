@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 import { dataProyects } from "../../data";
 
-const HorizontalScroll = () => {
+const HorizontalScroll = ({ mode }) => {
   return (
     <Box
       sx={{
@@ -34,8 +34,9 @@ const HorizontalScroll = () => {
         modules={[Navigation, Pagination]}
         className="mySwiper"
         style={{
-          "--swiper-pagination-color": "#9032bb",
-          "--swiper-navigation-color": "#9032bb",
+          "--swiper-pagination-color": mode === "light" ? "#9032bb" : "#03a9f4",
+          "--swiper-pagination-bullet-inactive-color":
+            mode === "light" ? "#9032bb" : "#03a9f4",
         }}
       >
         {dataProyects.map((item) => {
@@ -46,10 +47,10 @@ const HorizontalScroll = () => {
           );
         })}
         <div className="swiper-button image-swiper-button-prev">
-          <KeyboardArrowLeftIcon color="secondary" sx={{ fontSize: "40px" }} />
+          <KeyboardArrowLeftIcon color="primary" sx={{ fontSize: "40px" }} />
         </div>
         <div className="swiper-button image-swiper-button-next">
-          <KeyboardArrowRightIcon color="secondary" sx={{ fontSize: "40px" }} />
+          <KeyboardArrowRightIcon color="primary" sx={{ fontSize: "40px" }} />
         </div>
       </Swiper>
     </Box>
