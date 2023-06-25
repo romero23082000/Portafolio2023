@@ -2,6 +2,7 @@ import { Box, Divider, IconButton, Paper, Typography } from "@mui/material";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ModalPdf from "./ModalPdf";
 
 const Home = () => {
   return (
@@ -39,6 +40,7 @@ const Home = () => {
         >
           <GitHubIcon />
         </IconButton>
+        <ModalPdf />
       </Box>
     </Paper>
   );
