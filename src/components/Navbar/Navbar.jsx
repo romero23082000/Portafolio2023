@@ -4,6 +4,7 @@ import {
   Button,
   Drawer,
   Toolbar,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -70,13 +71,11 @@ const Navbar = (props) => {
               );
             })}
           </Box>
-
-          <Typography color="primary">
-            | {mode === "light" ? "Light" : "Dark"} mode
-          </Typography>
-          <IconButton sx={{ ml: 1 }} onClick={handleModeChange}>
-            {mode === "light" ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
+          <Tooltip title={mode === "light" ? "Light mode" : "Dark mode"}>
+            <IconButton sx={{ ml: 1 }} onClick={handleModeChange}>
+              {mode === "light" ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
 

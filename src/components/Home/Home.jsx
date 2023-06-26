@@ -2,14 +2,16 @@ import { Box, Divider, IconButton, Paper, Typography } from "@mui/material";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import ModalPdf from "./ModalPdf";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import pdf from "../../assets/pdf/Andres Romero HV.pdf";
+import Tooltip from "@mui/material/Tooltip";
 
 const Home = () => {
   return (
     <Paper elevation={24} sx={{ width: "500px", margin: "16px" }}>
       <Box sx={{ padding: "16px" }}>
         <Typography variant="h6" color="primary" fontWeight={700}>
-          Hola
+          ¡Bienvenidos!
         </Typography>
         <Typography variant="body1">
           Soy <b>Andres Romero</b> Desarrollador web profesional con experiencia
@@ -19,28 +21,48 @@ const Home = () => {
           resultados, gestión de soluciones, trabajo en equipo dispuesto a
           continuar mi crecimiento en los ámbitos profesional y personal.
         </Typography>
-        <Divider sx={{ marginY: "10px", backgroundColor: "#f988ff" }} />
-        <IconButton
-          sx={{
-            "&:hover": {
-              color: "#fff",
-              backgroundColor: "#005082",
-            },
-          }}
-        >
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton
-          sx={{
-            "&:hover": {
-              backgroundColor: "#6e5494",
-              color: "#fff",
-            },
-          }}
-        >
-          <GitHubIcon />
-        </IconButton>
-        <ModalPdf />
+        <Divider sx={{ marginY: "10px", bgcolor: "primary.light" }} />
+        <Tooltip title="Mi LinkedIn">
+          <IconButton
+            sx={{
+              "&:hover": {
+                color: "#fff",
+                backgroundColor: "#005082",
+              },
+            }}
+          >
+            <LinkedInIcon />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Mi Github">
+          <IconButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "#6e5494",
+                color: "#fff",
+              },
+            }}
+          >
+            <GitHubIcon />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Descargar HV">
+          <IconButton
+            component="a"
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Andres Romero HV.pdf"
+            sx={{
+              "&:hover": {
+                backgroundColor: "#c50606",
+                color: "#fff",
+              },
+            }}
+          >
+            <PictureAsPdfIcon />
+          </IconButton>
+        </Tooltip>
       </Box>
     </Paper>
   );
