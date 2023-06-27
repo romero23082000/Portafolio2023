@@ -30,6 +30,9 @@ const Home = () => {
                 backgroundColor: "#005082",
               },
             }}
+            component="a"
+            target="_blank"
+            href="https://www.linkedin.com/in/andres-romero-ibague-1508891bb/"
           >
             <LinkedInIcon />
           </IconButton>
@@ -42,6 +45,9 @@ const Home = () => {
                 color: "#fff",
               },
             }}
+            component="a"
+            href="https://github.com/romero23082000"
+            target="_blank"
           >
             <GitHubIcon />
           </IconButton>

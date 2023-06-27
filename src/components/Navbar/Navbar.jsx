@@ -36,7 +36,6 @@ const navLinks = [
     title: "Contacto",
     path: "#Contacto",
   },
-  ,
 ];
 
 const Navbar = (props) => {
