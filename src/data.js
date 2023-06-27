@@ -1,10 +1,10 @@
 import WebIcon from "@mui/icons-material/Web";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import img from "./assets/img/PrimeraImagen.jpg";
-import img2 from "./assets/img/countrys.png";
-import img3 from "./assets/img/gymapp.png";
-import img4 from "./assets/img/hackernews.jpg";
-import img5 from "./assets/img/Dashboardredsocial.jpg";
+import img from "./assets/img/webpelis.png";
+import img2 from "./assets/img/webcountrys.png";
+import img3 from "./assets/img/webgym.png";
+import img4 from "./assets/img/webnews.png";
+import img5 from "./assets/img/dashboard.png";
 
 export const data = [
 

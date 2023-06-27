@@ -19,7 +19,7 @@ const Cards = (props) => {
         component="img"
         image={item.img}
         title="proyecto"
-        sx={{ width: "100%", height: { xs: "75px", md: "150px" } }}
+        sx={{ width: "100%", height: { xs: "75px", sm: "100px", md: "150px" } }}
       />
 
       <CardContent>
