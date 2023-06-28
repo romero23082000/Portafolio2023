@@ -1,48 +1,56 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, IconButton, Tooltip, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Divider from "@mui/material/Divider";
 
 const Footer = () => {
   return (
     <>
-      <Grid item>
-        <Typography variant="h3" fontWeight={700}>
-          Rome
+      <Grid item sx={{ textAlign: "center" }}>
+        <Typography variant="h4" fontWeight={700}>
+          Andres Romero
         </Typography>
         <Typography>Frontend Developer</Typography>
+        <Grid item>
+          <Tooltip title="Mi Github">
+            <IconButton
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  backgroundColor: "#6e5494",
+                  color: "#fff",
+                },
+              }}
+              component="a"
+              href="https://github.com/romero23082000"
+              target="_blank"
+            >
+              <GitHubIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Mi LinkedIn">
+            <IconButton
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "#fff",
+                  backgroundColor: "#005082",
+                },
+              }}
+              component="a"
+              target="_blank"
+              href="https://www.linkedin.com/in/andres-romero-ibague-1508891bb/"
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
+        </Grid>
+        <Typography variant="body2">
+          © 2023 Andres Romero. Todos los derechos reservados.
+        </Typography>
       </Grid>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-          height: "100%",
-          alignItems: "center",
-          height: "200px",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            gap: "30px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Typography variant="h6">Contactame</Typography>
-          <Typography variant="h6">Experiencias</Typography>
-          <Typography variant="h6">Nivel tecnologico</Typography>
-        </Box>
-        <Typography>Design: Andres Romero</Typography>
-      </Grid>
-      {/* <Grid item>
-        <GitHubIcon />
-        <LinkedInIcon />
-      </Grid> */}
     </>
   );
 };

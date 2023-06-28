@@ -12,6 +12,7 @@ import { useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import createCustomTheme from "./theme";
+import { Zoom, Roll, Bounce, Slide, Fade } from "react-awesome-reveal";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -48,53 +49,61 @@ function App() {
         >
           <Home />
         </Grid>
-        <Grid item id="Nivel">
-          <Headers
-            text1="Nivel tecnologico"
-            text2=" Herramientas y tecnologias que suelo usar en mis desarrollos"
-          />
-          <AccordionSkills />
-        </Grid>
-        <Grid
-          item
-          sx={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-          id="Experiencias"
-        >
-          <Headers
-            text1="Experiencias"
-            text2="Mi recorrido laboral y educativo"
-          />
-          <TabsXp />
-        </Grid>
-        <Grid
-          item
-          sx={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-          id="Proyectos"
-        >
-          <Headers text1="Proyectos" text2="Proyectos realizados" />
-          <HorizontalScroll mode={mode} />
-        </Grid>
-        <Grid
-          sx={{
-            margin: "0px 15px 30px 15px",
-          }}
-          id="Contacto"
-        >
-          <Headers text1="Contactame" text2="Ponte en contacto conmigo" />
-          <Contact />
-        </Grid>
+        <Zoom>
+          <Grid item id="Nivel">
+            <Headers
+              text1="Nivel tecnologico"
+              text2=" Herramientas y tecnologias que suelo usar en mis desarrollos"
+            />
+            <AccordionSkills />
+          </Grid>
+        </Zoom>
+        <Slide direction="right">
+          <Grid
+            item
+            sx={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+            id="Experiencias"
+          >
+            <Headers
+              text1="Experiencias"
+              text2="Mi recorrido laboral y educativo"
+            />
+            <TabsXp />
+          </Grid>
+        </Slide>
+        <Bounce>
+          <Grid
+            item
+            sx={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+            id="Proyectos"
+          >
+            <Headers text1="Proyectos" text2="Proyectos realizados" />
+            <HorizontalScroll mode={mode} />
+          </Grid>
+        </Bounce>
+        <Fade>
+          <Grid
+            sx={{
+              margin: "0px 15px 30px 15px",
+            }}
+            id="Contacto"
+          >
+            <Headers text1="Contactame" text2="Ponte en contacto conmigo" />
+            <Contact />
+          </Grid>
+        </Fade>
         <Grid
           container
           direction="row"
