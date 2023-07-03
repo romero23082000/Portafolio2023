@@ -10,7 +10,7 @@ import { Fade } from "react-awesome-reveal";
 const Home = () => {
   return (
     <Fade>
-      <Paper elevation={24} sx={{ width: "500px", margin: "16px" }}>
+      <Paper elevation={24} sx={{ width: { sm: "500px" }, margin: "20px" }}>
         <Box sx={{ padding: "16px" }}>
           <Typography variant="h6" color="primary" fontWeight={700}>
             ¡Bienvenidos!
